@@ -1,7 +1,7 @@
 #!/bin/bash 
 
           #AUTHOR: Sophia Mboup 
-          DATE :   October 2022
+          #DATE :   October 2022
 
  #------------ Jenkins Installation ----------------
 
@@ -19,7 +19,6 @@ systemctl enable jenkins
 YOURPORT=8080
 PERM="--permanent"
 SERV="$PERM --service=jenkins"
-
 firewall-cmd $PERM --new-service=jenkins
 firewall-cmd $SERV --set-short="Jenkins ports"
 firewall-cmd $SERV --set-description="Jenkins port exceptions"
